@@ -13,16 +13,16 @@
 </title>
 </h:head>
 <h:body>
-  <h:outputStylesheet library="css" name="default.css" target="body" />
+  <h:outputStylesheet library="css" name="default.css" />
 <div class="heading">
 <ui:insert name="heading">
        #{msg.mainHeading}
      </ui:insert>
 
-    <div id="sidebar">          
+            <div id="sidebar">          
                <h:form id="langauge_form">
-                  <h:commandLink action="#{languageSwitcher.changeLanguage('pl')}" value="Polski" /> |
-                  <h:commandLink action="#{languageSwitcher.changeLanguage('en')}" value="English" />
+                  <h:commandLink action="#{languageSwitcher.changeLanguage('pl')}" value="PL" /> |
+                  <h:commandLink action="#{languageSwitcher.changeLanguage('en')}" value="EN" />
                </h:form>
             </div>
     

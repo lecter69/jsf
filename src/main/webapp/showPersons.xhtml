@@ -6,16 +6,14 @@
 	template="/templates/default.xhtml">
 	
 	<ui:define name="content">
-    
-     <h:dataTable  value="#{personBean.allPersons}" var="item">
+    <h:outputText  value="#{msg.personAllLabel}"/><br/><br/>
+     <h:dataTable  id="supertabela" value="#{personBean.allPersons}" var="item">
       
-      <f:facet name="header">#{msg.personAllLabel}</f:facet>
+      
       
        <h:column>
         <f:facet name="header">#{msg.personIdLabel}</f:facet>
-        
-
-   
+          
 
     #{item.id}
       </h:column>
