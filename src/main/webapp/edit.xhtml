@@ -16,7 +16,7 @@
 				<h:inputText id="id" value="#{personBean.person.id}" />-->
 
 				<h:commandButton value="#{msg.personFormOKButton}"
-					action="showPersons" />
+					action="#{personBean.afterEdit()}" />
 			</h:panelGrid>
 
 			<h:panelGrid>

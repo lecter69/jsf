@@ -9,9 +9,6 @@ import javax.inject.Named;
 
 import com.example.jsfdemo.domain.Person;
 import com.example.jsfdemo.service.PersonManager;
-import java.util.Map;
-
-import javax.faces.context.FacesContext;
 
 @SessionScoped
 @Named("personBean")
@@ -41,28 +38,24 @@ public class PersonFormBean implements Serializable {
 	}
 	
 	// Actions
-	public String addPerson(){
-		
-		pm.addPerson(person);
-		
+	public String addPerson(){		
+		pm.addPerson(person);		
 		return "showPersons";
 	}
-        
-        
-        
+                        
         public String removePerson(Person person){
-
-                     pm.removePerson(person);                    
-             
-             return "showPersons";
+                pm.removePerson(person);                                 
+                return "showPersons";
 	}
         
         public String editPerson(Person person){
-
-                setPerson(person);
-		return "edit";
+                setPerson(person);                
+		return "edit";                
 	}
+        
+        public String afterEdit(){
+                setPerson(new Person());
+                return "showPersons";
+        }
          
-          
 }
-

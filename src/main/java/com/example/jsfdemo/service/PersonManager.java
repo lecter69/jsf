@@ -26,11 +26,7 @@ public class PersonManager {
         public void removePerson(Person person){
             db.remove(person);
 	}
-        
-        public void editPerson(Person person){
-            //db.update(person);
-	}
-	
+        	
 	public List<Person> getAllPerson(){
 		return db;
 	}
