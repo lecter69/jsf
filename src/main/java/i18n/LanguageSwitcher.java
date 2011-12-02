@@ -10,6 +10,7 @@ import javax.faces.context.FacesContext;
 
 @ManagedBean
 @SessionScoped
+
 public class LanguageSwitcher implements Serializable {
 
 	private static final long serialVersionUID = 2756934361134603857L;

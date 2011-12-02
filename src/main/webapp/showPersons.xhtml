@@ -6,16 +6,15 @@
 	template="/templates/default.xhtml">
 	
 	<ui:define name="content">
-    <h:outputText  value="#{msg.personAllLabel}"/><br/><br/>
+            <h1><h:outputText  value="#{msg.personAllLabel}"/><br/><br/></h1>
      <h:dataTable  id="supertabela" value="#{personBean.allPersons}" var="item">
       
       
       
        <h:column>
         <f:facet name="header">#{msg.personIdLabel}</f:facet>
-          
-
-    #{item.id}
+ 
+ #{item.id}
       </h:column>
       
       <h:column>
@@ -33,16 +32,13 @@
             <h:form>
         <h:commandLink value="#{msg.personRemoveLabel}" action="#{personBean.removePerson(item)}"/>
 
-            </h:form>
-       </h:column>
-      
-      <h:column>  <h:form> 
+        |
           <h:commandLink value="#{msg.personEditLabel}" action="#{personBean.editPerson(item)}"/>
                </h:form>
       </h:column>
  
      </h:dataTable>
-        
+        <br/>
      <h:form>
         <h:commandLink value="#{msg.personAddLabel}" action="add" />
      </h:form>
