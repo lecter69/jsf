@@ -6,6 +6,11 @@
       http://java.sun.com/xml/ns/javaee
       http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd">
 
+                <validator>
+                          <validator-id>isTrue</validator-id>
+                          <validator-class>validators.IsTrue</validator-class>
+                </validator>
+
 	<!-- Write your navigation rules here. You should use CDI for creating @Named 
 		managed beans! -->
 
@@ -20,6 +25,8 @@
 			<supported-locale>pl</supported-locale>
 			<supported-locale>en</supported-locale>
 		</locale-config>
+                
+                
 		
 	</application>
 </faces-config>

@@ -61,11 +61,6 @@ public class PersonFormBean implements Serializable {
                 setPerson(new Person());
                 return "showPersons";
         }
-        
-        public void validateCheckbox(FacesContext context, UIComponent component, Object value) {
-            if (value instanceof Boolean && ((Boolean) value).equals(Boolean.FALSE)) {
-                throw new ValidatorException(new FacesMessage("error"));
-            }
-        }
+                
          
 }
