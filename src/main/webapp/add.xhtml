@@ -11,13 +11,18 @@
 				<h:messages showDetail="#{true}" showSummary="#{false}" />
 			
 			<h:panelGrid columns="2">
-				<h:outputText value="#{msg.personNameLabel}" />
+				<h:outputText value="#{msg.personNameLabel2}" />
 				<h:inputText id="name" value="#{personBean.person.name}" required="true" />
-				<h:outputText value="#{msg.personYobLabel}" />
+				<h:outputText value="#{msg.personYobLabel2}" />
 				<h:inputText id="yob" value="#{personBean.person.yob}">                                   
                                     <f:validateLongRange minimum="1900" maximum="2011"/>
                                 </h:inputText>                                  
 
+                                <h:selectBooleanCheckbox id="accept"
+                                validator="#{personBean.validateCheckbox}"
+                                value="zgadzam się z regulaminem" required="true">
+                                </h:selectBooleanCheckbox>
+                                
 				<h:commandButton value="#{msg.personFormOKButton}"
 					action="#{personBean.addPerson}" />
 			</h:panelGrid >
